@@ -22,29 +22,34 @@
                 </a>
             </li>
             <li class="menu-label">Pages</li>
-            <li>
+            <li class="{{ Route::is('users.admin') || Route::is('users.patient') ? 'mm-active' : '' }}">
                 <a class="has-arrow" href="javascript:;">
-                    <div class="parent-icon"><i class="material-icons-outlined">lock</i>
+                    <div class="parent-icon"><i class="material-icons-outlined">group</i>
                     </div>
-                    <div class="menu-title">Authentication</div>
+                    <div class="menu-title">Users</div>
                 </a>
                 <ul>
-                    <li><a href="ecommerce-add-product.html"><i class="material-icons-outlined">arrow_right</i>Add
-                            Product</a>
+                    <li class="{{ Route::is('users.admin') ? 'mm-active' : '' }}">
+                        <a href="{{ route('users.admin') }}">
+                            <i class="material-icons-outlined">arrow_right</i>
+                            Admin
+                        </a>
                     </li>
-                    <li><a class="has-arrow" href="javascript:;"><i
+                    <li class="{{ Route::is('users.patient') ? 'mm-active' : '' }}">
+                        <a href="{{ route('users.patient') }}">
+                            <i class="material-icons-outlined">arrow_right</i>
+                            Patient
+                        </a>
+                    </li>
+                    {{-- <li><a class="has-arrow" href="javascript:;"><i
                                 class="material-icons-outlined">arrow_right</i>Basic</a>
                         <ul>
                             <li><a href="auth-basic-login.html" target="_blank"><i
                                         class="material-icons-outlined">arrow_right</i>Login</a></li>
                             <li><a href="auth-basic-register.html" target="_blank"><i
                                         class="material-icons-outlined">arrow_right</i>Register</a></li>
-                            <li><a href="auth-basic-forgot-password.html" target="_blank"><i
-                                        class="material-icons-outlined">arrow_right</i>Forgot Password</a></li>
-                            <li><a href="auth-basic-reset-password.html" target="_blank"><i
-                                        class="material-icons-outlined">arrow_right</i>Reset Password</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
             <li>
