@@ -37,6 +37,7 @@
     <!--plugins-->
     <script src="{{ asset('dashboard/assets/js/jquery.min.js') }}"></script>
 
+    @include('sweetalert::alert')
     <script>
         $(document).ready(function() {
             $("#show_hide_password a").on('click', function(event) {

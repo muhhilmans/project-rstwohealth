@@ -14,8 +14,8 @@
     <div class="sidebar-nav">
         <!--navigation-->
         <ul class="metismenu" id="sidenav">
-            <li class="{{ Route::is('cms.dashboard') ? 'mm-active' : '' }}">
-                <a href="{{ route('cms.dashboard') }}">
+            <li class="{{ Route::is('dashboard') ? 'mm-active' : '' }}">
+                <a href="{{ route('dashboard') }}">
                     <div class="parent-icon"><i class="material-icons-outlined">home</i>
                     </div>
                     <div class="menu-title">Dashboard</div>

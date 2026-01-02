@@ -265,6 +265,8 @@
     </div> --}}
     <!--start switcher-->
 
+    
+    @include('sweetalert::alert')
     <!--bootstrap js-->
     <script src="{{ asset('dashboard/assets/js/bootstrap.bundle.min.js') }}"></script>
 
@@ -285,6 +287,7 @@
         new PerfectScrollbar(".user-list")
     </script>
 
+    @stack('custom-scripts')
 </body>
 
 </html>
